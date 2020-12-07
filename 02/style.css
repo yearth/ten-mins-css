@@ -18,6 +18,8 @@ body {
   height: 250px;
   overflow: hidden;
   position: relative;
+  border-radius: 50%;
+  transform: rotate(175deg);
 }
 
 .loader span {
@@ -29,4 +31,5 @@ body {
   border: 10px solid #0b0b0b;
   border-top: 10px solid #0f0;
   border-left: 10px solid #0f0;
+  border-radius: 50%;
 }
