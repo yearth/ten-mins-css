@@ -1,0 +1,89 @@
+:root {
+  --theme-color: #03a9f4;
+  --bg-color: #182b3c;
+  --text-color: #ffffff;
+  --default-length: 4px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--theme-color);
+}
+
+.container {
+  padding: 40px;
+  background: var(--bg-color);
+  box-shadow: 0 15px 25px #00000040;
+}
+
+.container .title {
+  margin-left: 20%;
+  display: inline-block;
+  margin-bottom: calc(var(--default-length) * 4);
+  font-weight: 500;
+  color: var(--text-color);
+  border-bottom: 2px solid var(--text-color);
+}
+
+.container li {
+  margin: calc(var(--default-length) * 3) 0;
+  position: relative;
+  list-style: none;
+  color: var(--text-color);
+  padding-left: calc(var(--default-length) * 8);
+}
+
+.container li p {
+  position: relative;
+  padding: 4px 8px;
+  z-index: 10;
+}
+
+.container li::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(var(--default-length) * 8);
+  height: calc(var(--default-length) * 8);
+  border-radius: calc(var(--default-length) * 8);
+  border: 2px solid var(--theme-color);
+  transition: background 0.5s, width 0.5s;
+  transition-delay: 0.5s, 0s;
+}
+.container li:hover::before {
+  background: var(--theme-color);
+  transition-delay: 0s, 0.5s;
+  width: 100%;
+}
+
+.container li::after {
+  content: "";
+  position: absolute;
+  background: transparent;
+  top: calc(var(--default-length) * 2.75);
+  left: calc(var(--default-length) * 2.5);
+  width: calc(var(--default-length) * 2);
+  height: calc(var(--default-length) * 2);
+  border-top: 2px solid var(--text-color);
+  border-right: 2px solid var(--text-color);
+  transform: rotate(45deg);
+  transition: 0.5s;
+  transition-delay: 0;
+}
+
+.container li:hover::after {
+  left: calc(var(--default-length) * 4);
+  transition-delay: 0.5s;
+  transform: rotate(45deg) scale(1.2);
+}
