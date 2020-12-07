@@ -32,7 +32,9 @@ body {
   border-top: 10px solid #0f0;
   border-left: 10px solid #0f0;
   border-radius: 50%;
+  filter: hue-rotate(calc(60deg * var(--i)));
   animation: wave 1s alternate ease-in-out infinite;
+  animation-delay: calc(-0.1s * var(--i));
 }
 
 @keyframes wave {
