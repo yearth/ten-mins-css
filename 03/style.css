@@ -38,7 +38,7 @@ body {
 }
 .action .menu {
   position: absolute;
-  top: 80px;
+  top: 120px;
   right: -10px;
   width: 200px;
   padding: 10px 20px;
@@ -50,6 +50,7 @@ body {
   visibility: hidden;
 }
 .action .menu.active {
+  top: 80px;
   opacity: 1;
   visibility: visible;
 }
